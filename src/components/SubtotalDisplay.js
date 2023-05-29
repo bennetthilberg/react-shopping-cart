@@ -10,6 +10,6 @@ export default function SubtotalDisplay({cart}){
         setSubt(tempTotal);
     }, [cart])
     return(
-        <h2>Subtotal: {subt}</h2>
+        <h2>Subtotal: ${subt}</h2>
     );
 }

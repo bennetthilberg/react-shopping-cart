@@ -6,11 +6,35 @@
 .link{
     margin: 10px;
     padding: 4px;
-    border: 2px solid navy;
-    background-color: aqua;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+
+}
+.link:active{
+    text-decoration: none;
+    color: black;
+}
+.link:visited{
+    text-decoration: none;
+    color: black;
 }
 #topBar{
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+#topBar>*{
+    align-content: center;
+    text-align: center;
+    transition: border 0.5 ease-in-out;
+    border: 2px solid white;
+}
+#topBar>h2{
+    padding-top: 12px;
+}
+#topBar>.link:hover{
+    border: 2px solid black;
 }
 button{
     cursor: pointer;

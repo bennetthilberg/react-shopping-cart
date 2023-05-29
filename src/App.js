@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Card from './components/Card';
 import SubtotalDisplay from './components/SubtotalDisplay';
+import Checkout from './components/Checkout';
 
 function Main(){
   const [cart, setCart] = useState([]);
@@ -21,13 +22,14 @@ function Main(){
     <>
         <div id='topBar'>
           <Link to='/home' className='link homeLink'>Home</Link>
-          <Link to="/Shop" className='link shopLink'>Shop</Link>
+          <Link to="/shop" className='link shopLink'>Shop</Link>
           <SubtotalDisplay cart={cart}/>
+          <Link to='/checkout' className='link checkoutLink'>Checkout</Link>
         </div>
         <Routes>
           <Route path='/home' element={<Home/>}/>
           <Route path='/shop' element={<Shop addToCart={addToCart}/>}/>
-          
+          <Route path='/checkout' element={<Checkout cart={cart}/>}/>
         </Routes>
     </>
   );
